@@ -1,4 +1,4 @@
-package com.springtest.springtest.model;
+    package com.springtest.springtest.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

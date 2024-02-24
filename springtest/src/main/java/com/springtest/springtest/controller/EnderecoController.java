@@ -15,7 +15,11 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @RestController
 public class EnderecoController {
-    // Metodo para cadastrar o endereço
+
+    
+    @Autowired
+    private EnderecoRepository enderecoRepository;
+
     @PostMapping("/enderecos")
     public Endereco cadastrarEndereco(@RequestBody Endereco endereco) {
         enderecoRepository.save(endereco);
@@ -24,10 +28,7 @@ public class EnderecoController {
 
     @GetMapping("/enderecos")
     public List<Endereco> listarEnderecos() {
-        // This returns a JSON or XML with the users
         return enderecoRepository.findAll();
     }
 
-    @Autowired
-    private EnderecoRepository enderecoRepository;
 }
